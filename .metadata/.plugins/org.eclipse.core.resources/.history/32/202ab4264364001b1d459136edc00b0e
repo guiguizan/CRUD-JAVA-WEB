@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<head>
+<meta http-equiv="content=type" content="text/html"></meta>
+<title>projetao</title>
+
+<h:outputStylesheet name="estilo.css" library="css" />
+
+
+</head>
+
+
+<h:form>
+
+
+	<div style="margin-left:5%; margin-top:5%;" >
+		<h:outputText style="margin-left:5%" value="Dados do usuário" /> <br />
+		<br />
+		<h:outputText value="Nome: " />
+		<h:inputText styleClass="nome" value="#{controleCliente.cliente.nome}" />
+		<br />
+
+		<h:outputText value="Idade: " />
+		<h:inputText style="margin-left:2px" styleClass="idade"
+			value="#{controleCliente.cliente.idade}" />
+		<br />
+
+		<h:outputText value="CPF: " />
+		<h:inputText style="margin-left:9px"
+			value="#{controleCliente.cliente.cpf}" />
+		<br />
+
+		<h:outputText value="Logradouro " />
+		<h:inputText style="width:116px"
+			value="#{controleCliente.endereco.logradouro}" />
+		<br />
+		
+			<h:outputText value="Numero: " />
+		<h:inputText style="width:134px" 
+			value="#{controleCliente.endereco.numeroCasa}" />
+		<br />
+		
+		
+		
+	<h:commandButton style="margin-left:6%" action="#{controleCliente.salvar}"
+		value="Enviar dados" />
+
+	</div>
+
+
+</h:form>
+
+
+</html>

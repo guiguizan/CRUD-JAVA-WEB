@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<h:outputText value=" CRUD,  by Gui" />
+
+
+<h:form>
+<br />
+	<h:commandButton style="margin-left:10%; border-radius:10% " action="#{controleCliente.novo}"
+		value="Cadastrar novo cliente" />
+<br />
+
+<br />
+
+
+	<h:dataTable value="#{controleCliente.clientes}" var="cliente"
+		border="1">
+
+		<h:column>
+			<f:facet name="header"> ID </f:facet>
+		#{cliente.id}
+	</h:column>
+
+		<h:column>
+			<f:facet name="header"> nome </f:facet>
+		#{cliente.nome}
+	</h:column>
+
+		<h:column>
+			<f:facet name="header"> Idade </f:facet>
+		#{cliente.idade}
+	</h:column>
+
+		<h:column>
+			<f:facet name="header"> CPF </f:facet>
+		#{cliente.cpf}
+	</h:column>
+
+
+	<h:column>
+		<f:facet name="header"> Endereços </f:facet>
+
+
+
+	</h:column>
+
+		<h:column>
+			<h:commandLink action="#{controleCliente.editar}">Editar
+			<f:setPropertyActionListener target="#{controleCliente.cliente}"
+					value="#{cliente}" />
+			</h:commandLink>
+		</h:column>
+
+
+		<h:column>
+			<h:commandLink action="#{controleCliente.remover}">Remover
+			<f:setPropertyActionListener target="#{controleCliente.cliente}"
+					value="#{cliente}" />
+			</h:commandLink>
+		</h:column>
+
+	</h:dataTable>
+</h:form>
+</html>

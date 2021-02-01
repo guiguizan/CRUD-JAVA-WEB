@@ -1,0 +1,37 @@
+package com.exemplo.entidade;
+
+import java.io.Serializable;
+
+import javax.persistence.Embeddable;
+
+
+
+@Embeddable
+public class ClienteEnderecoId implements Serializable {
+
+
+	private static final long serialVersionUID = 3392969844389504835L;
+	
+	private Long clienteId;
+	private Long enderecoId;
+	
+	
+	public Long getClienteId() {
+		return clienteId;
+	}
+	public void setClienteId(Long clienteId) {
+		this.clienteId = clienteId;
+	}
+	public Long getEnderecoId() {
+		return enderecoId;
+	}
+	public void setEnderecoId(Long enderecoId) {
+		this.enderecoId = enderecoId;
+	}
+	
+	
+	
+	
+	
+	
+}

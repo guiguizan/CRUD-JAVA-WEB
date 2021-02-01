@@ -1,0 +1,60 @@
+package com.exemplo.entidade;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="ClienteEndereco")
+public class ClienteEndereco {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+	
+	@ManyToOne
+	@JoinColumn(name="id_endereco", insertable = false, updatable = false)
+	private Integer id_endereco;
+	
+	@ManyToOne
+	@JoinColumn(name="id_cliente", insertable = false, updatable = false)
+	private Integer id_cliente;
+
+	
+	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Integer getEndereco() {
+		return id_endereco;
+	}
+
+	public void setEndereco(Integer endereco) {
+		this.id_endereco = endereco;
+	}
+
+	public Integer getCliente() {
+		return id_cliente;
+	}
+
+	public void setCliente(Integer cliente) {
+		this.id_cliente = cliente;
+	}
+	
+	
+	
+	
+
+	
+	
+
+}

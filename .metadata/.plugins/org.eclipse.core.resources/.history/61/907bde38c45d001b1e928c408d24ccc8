@@ -1,0 +1,4 @@
+
+module crud {
+	requires persistence.api;
+}

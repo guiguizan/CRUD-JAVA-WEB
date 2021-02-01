@@ -1,0 +1,83 @@
+package com.exemplo.repositorio;
+
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.exemplo.entidade.Integer;
+import com.exemplo.entidade.ClienteEndereco;
+import com.exemplo.entidade.Endereco;
+
+
+public class RepositorioCliente {
+	
+	EntityManagerFactory emf;
+	EntityManager em;
+	
+	public RepositorioCliente() {
+		emf = Persistence.createEntityManagerFactory("mohr");
+		em = emf.createEntityManager();
+	}
+
+	public Integer obterPorId(int id) {	
+		em.getTransaction().begin();
+		Integer cliente = em.find(Integer.class, id);
+		em.getTransaction().commit();
+		emf.close();
+		return cliente;
+	}
+	
+	public void salvar(Integer cliente) {
+		em.getTransaction().begin();
+		em.merge(cliente);
+		em.getTransaction().commit();
+		emf.close();
+	}
+	
+	public void salvar(Endereco endereco) {
+		em.getTransaction().begin();
+		em.merge(endereco);
+		em.getTransaction().commit();
+		emf.close();
+	}
+	
+	public void salvar(Integer cliente, Endereco endereco) {
+		em.getTransaction().begin();
+		//grava os dados do cliente na tabela cliente
+		//e retorna as informaçções gravadas com od ID gerado pelo banco de dados
+		Integer clienteGravado = em.merge(cliente);
+		//grava o msm com endereço
+		Endereco enderecoGravado = em.merge(endereco);
+		em.flush();
+		ClienteEndereco clienteEndereco = new ClienteEndereco();
+		clienteEndereco.setEndereco(enderecoGravado);
+		clienteEndereco.setCliente(clienteGravado);
+		em.merge(clienteEndereco);
+		em.getTransaction().commit();
+		emf.close();
+	}
+	
+	public void remover(Integer c) {
+		
+		em.getTransaction().begin();
+		em.remove(c);
+		em.getTransaction().commit();
+		emf.close();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Integer> listarTodos(){	
+		em.getTransaction().begin();
+		Query consulta = em.createQuery("select cliente from Cliente cliente");
+		List<Integer> clientes = consulta.getResultList();
+		em.getTransaction().commit();
+		emf.close();
+		return null;
+		
+	}	
+	
+	
+	
+}

@@ -1,0 +1,13 @@
+127.0.0.1 - - [30/Jan/2021:14:26:17 -0300] "GET / HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [30/Jan/2021:14:27:23 -0300] "GET /crudnaweb/index.xhtml HTTP/1.1" 200 1357
+0:0:0:0:0:0:0:1 - - [30/Jan/2021:14:27:25 -0300] "POST /crudnaweb/index.xhtml HTTP/1.1" 200 2346
+0:0:0:0:0:0:0:1 - - [30/Jan/2021:14:27:33 -0300] "POST /crudnaweb/formularioCliente.xhtml HTTP/1.1" 500 3430
+127.0.0.1 - - [30/Jan/2021:14:35:33 -0300] "GET / HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [30/Jan/2021:14:35:36 -0300] "GET /crudnaweb/index.xhtml HTTP/1.1" 200 1357
+0:0:0:0:0:0:0:1 - - [30/Jan/2021:14:36:17 -0300] "GET /crudnaweb/index.xhtml HTTP/1.1" 200 1357
+127.0.0.1 - - [30/Jan/2021:14:41:57 -0300] "GET / HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [30/Jan/2021:14:42:00 -0300] "GET /crudnaweb/index.xhtml HTTP/1.1" 500 2726
+127.0.0.1 - - [30/Jan/2021:14:42:36 -0300] "GET / HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [30/Jan/2021:14:42:39 -0300] "GET /crudnaweb/index.xhtml HTTP/1.1" 200 3146
+0:0:0:0:0:0:0:1 - - [30/Jan/2021:14:42:39 -0300] "GET /crudnaweb/javax.faces.resource/jsf.js.xhtml?ln=javax.faces HTTP/1.1" 200 39083
+0:0:0:0:0:0:0:1 - - [30/Jan/2021:14:43:04 -0300] "POST /crudnaweb/index.xhtml HTTP/1.1" 200 2375

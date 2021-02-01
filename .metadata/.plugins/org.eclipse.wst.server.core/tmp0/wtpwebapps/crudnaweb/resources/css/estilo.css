@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+
+.nome{
+	 background-color:aqua;
+	 border-radius:6%;
+	 color:aqua;
+	 
+}
+
+.cpf{
+	width: 50%;
+}
