@@ -15,6 +15,28 @@
 	<br />
 	<h:commandButton style="margin-left:5%; border-radius:10% "
 		action="#{controleCliente.novo}" value="Cadastrar novo cliente" />
+
+
+
+	<h:outputText value="Endereço:  " />
+	<h:inputText style="width:127px" styleClass="endereco"
+		value="#{controleCliente.pesquisa.pesquisado}" />
+	<br />
+	
+	
+
+	<h:commandButton style="margin-left:5%; border-radius:10% "
+		action="#{controleCliente.novaPesquisa}" value="Pesquisar" />
+
+
+
+
+
+
+
+
+
+
 	<br />
 
 	<br />
@@ -43,17 +65,17 @@
 
 
 
-	<h:column>
-			<h:commandLink action="#{controleCliente.editarEndereco}" 
-			 style="color: purple; ">Enderecos
+		<h:column>
+			<h:commandLink action="#{controleCliente.editarEndereco}"
+				style="color: purple; ">Enderecos
 			<f:setPropertyActionListener target="#{controleCliente.cliente}"
 					value="#{cliente}" />
 			</h:commandLink>
 		</h:column>
 
 
-		
-		
+
+
 		<h:column>
 			<h:commandLink action="#{controleCliente.editar}">Editar
 			<f:setPropertyActionListener target="#{controleCliente.cliente}"
@@ -63,15 +85,15 @@
 
 
 		<h:column>
-			<h:commandLink  action="#{controleCliente.remover}" style="color: red">Remover
+			<h:commandLink action="#{controleCliente.remover}" style="color: red">Remover
 			<f:setPropertyActionListener target="#{controleCliente.cliente}"
 					value="#{cliente}" />
 			</h:commandLink>
 		</h:column>
 
 	</h:dataTable>
-	
-		
-		
+
+
+
 </h:form>
 </html>
