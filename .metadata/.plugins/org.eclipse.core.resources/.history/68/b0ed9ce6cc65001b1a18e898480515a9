@@ -107,14 +107,6 @@ public class ControleCliente {
 		return "index";
 	}
 	
-	public String salvarEdit() {	
-		repositorioCliente.salvar(cliente);
-		
-		return "index";
-	}
-	
-	
-	
 	public String salvarEndereco() {
 		
 		repositorioCliente.salvar(endereco );
@@ -137,7 +129,7 @@ public class ControleCliente {
 	}
 
 	public String editar() {
-		return "editarCliente";
+		return "formularioCliente";
 	}
 	
 	public String editarEndereco() {

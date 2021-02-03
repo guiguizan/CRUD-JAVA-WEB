@@ -107,8 +107,15 @@ public class ControleCliente {
 		return "index";
 	}
 	
-	public String salvarEdit() {	
+	public String salvarEdit() {
+		Random random = new Random();
+		int idClientinho = random.nextInt(100);
+		cliente.setIdCliente(idClientinho);
+		endereco.setIdEndereco(idClientinho);
+
+		
 		repositorioCliente.salvar(cliente);
+		repositorioCliente.salvar(endereco);
 		
 		return "index";
 	}

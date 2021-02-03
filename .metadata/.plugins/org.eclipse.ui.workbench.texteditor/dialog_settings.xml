@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Id"/>
+		<item key="selection" value="editar"/>
 		<list key="findhistory">
+			<item value="editar"/>
+			<item value="salvar"/>
 			<item value="id"/>
 			<item value="novoEnde"/>
 			<item value="novo"/>
@@ -20,9 +22,7 @@
 			<item value="endereco_seq"/>
 			<item value="Cliente"/>
 			<item value="tipo"/>
-			<item value="salvar"/>
 			<item value="endereco"/>
-			<item value="editar"/>
 		</list>
 		<list key="replacehistory">
 		</list>
