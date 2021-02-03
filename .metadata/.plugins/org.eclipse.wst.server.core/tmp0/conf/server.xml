@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\User\Documents\CÓDIGO\CRUD TRABALHO\Java web att\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\User\Documents\CÓDIGO\CRUD TRABALHO\Java web att\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\crudnaweb" path="/crudnaweb" reloadable="true" source="org.eclipse.jst.jee.server:crudnaweb"/><Context docBase="C:\Users\User\Documents\CÓDIGO\CRUD TRABALHO\Java web att\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\crud" path="/crud" reloadable="true" source="org.eclipse.jst.jee.server:crud"/></Host>
+      <Context docBase="C:\Users\lbuno\Documents\Gui\crud\atualizado\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\lbuno\Documents\Gui\crud\atualizado\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\crudnaweb" path="/crudnaweb" reloadable="true" source="org.eclipse.jst.jee.server:crudnaweb"/><Context docBase="C:\Users\lbuno\Documents\Gui\crud\atualizado\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\crud" path="/crud" reloadable="true" source="org.eclipse.jst.jee.server:crud"/></Host>
     </Engine>
   </Service>
 </Server>

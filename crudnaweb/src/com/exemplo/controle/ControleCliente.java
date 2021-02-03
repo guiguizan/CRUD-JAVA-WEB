@@ -96,13 +96,12 @@ public class ControleCliente {
 
 	public String salvar() {
 		Random random = new Random();
-		int idClientinho = random.nextInt(100);
+		int idClientinho = random.nextInt(1000);
 		cliente.setIdCliente(idClientinho);
-		endereco.setIdEndereco(idClientinho);
 
 		
 		repositorioCliente.salvar(cliente);
-		repositorioCliente.salvar(endereco);
+		
 		
 		return "index";
 	}

@@ -1,14 +1,11 @@
 package com.exemplo.repositorio;
 
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-
-import org.apache.tomcat.dbcp.dbcp2.ConnectionFactory;
 
 import com.exemplo.entidade.Cliente;
 import com.exemplo.entidade.Endereco;
