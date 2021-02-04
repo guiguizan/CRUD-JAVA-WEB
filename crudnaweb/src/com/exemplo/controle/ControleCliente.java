@@ -14,6 +14,7 @@ import com.exemplo.repositorio.RepositorioCliente;
 @ManagedBean(name = "controleCliente")
 @SessionScoped
 public class ControleCliente {
+	public static String valorPes;
 	private RepositorioCliente repositorioCliente;
 
 	private Cliente cliente;
@@ -28,7 +29,13 @@ public class ControleCliente {
 		repositorioCliente = new RepositorioCliente();
 		cliente = new Cliente();
 		endereco = new Endereco();
+		pesquisa = new Pesquisa();
 	}
+	
+	
+	
+	
+	
 
 	public List<Endereco> getEnderecos() {
 		enderecos = repositorioCliente.listarEnderecos();
@@ -101,7 +108,7 @@ public class ControleCliente {
 	}
 
 	public String novaPesquisa() {
-		pesquisa = new Pesquisa();
+
 		return "buscaEnd";
 	}
 
@@ -147,20 +154,12 @@ public class ControleCliente {
 	}
 
 	public String getPesquisaEndereco() {
-		return pesquisaEndereco;
-	}
-
-	public void setPesquisaEndereco(String pesquisaEndereco) {
-		this.pesquisaEndereco = pesquisaEndereco;
-	}
-
-	public Pesquisa getPesquisa() {
 		enderecos = repositorioCliente.listarEnderecos();
 		clientes = repositorioCliente.listarTodos();
 		List<Endereco> listaEndereco = enderecos;
 		List<Cliente> listaCliente = clientes;
 		ArrayList <String> logradouros = new ArrayList<String>();
-		String pesq = pesquisaEndereco;
+		String pesq = pesquisa.getPesquisado();
 
 		for (Endereco endereco : listaEndereco) {
 			 String log = endereco.getLogradouro();
@@ -169,7 +168,17 @@ public class ControleCliente {
 				 logradouros.add(pesq);
 			}
 		}
+		return pesquisaEndereco + logradouros;
+	}
 
+	public void setPesquisaEndereco(String pesquisaEndereco) {
+		this.pesquisaEndereco = pesquisaEndereco;
+	}
+	
+	
+
+
+	public Pesquisa getPesquisa() {
 		return pesquisa;
 	}
 

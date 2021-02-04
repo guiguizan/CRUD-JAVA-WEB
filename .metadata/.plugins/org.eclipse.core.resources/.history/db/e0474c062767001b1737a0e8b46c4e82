@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css"  href="estilo.css"/>
+        <title>Controle de Usuários</title>
+    </h:head>
+    <h:body>
+
+        <div id="geral">
+            <div id="content">
+                <div id="cabecalho">
+                    <div id="intCab">Controle de Usuários</div><!--fim intCab--><br />
+                    <div id="subTitulo">
+                        <h:form>Você está em:&nbsp;&nbsp;
+                            <h:outputLink value="index.xhtml" styleClass="umlink" >
+                                <f:verbatim>Home</f:verbatim>
+                            </h:outputLink>&nbsp;&nbsp;>>&nbsp;&nbsp;
+                            <h:outputLink value="buscar.xhtml" styleClass="doislink" >
+                                <f:verbatim>Buscar</f:verbatim>
+                            </h:outputLink>
+                        </h:form>
+                    </div><!--fim subtitulo-->
+                </div><!--fim cabecalho-->
+                <div id="conteudo">
+                    <div id="contPrincipal">
+                        <h:form>
+
+                            <table width="500" align="center">
+                                <tr>
+                                    <td colspan="2" align="right"><h:outputText value="Informe o nome do usuário a ser pesquisado" /></td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><h:inputText  value="#{usuarioBeans.nome}" /></td>
+                                    <td align="left"><h:commandButton value="Pesquisar" action="#{usuarioBeans.buscarClientePorNome}"></h:commandButton></td>
+                                </tr>
+                            </table>
+                            <br /><br /><br />
+                            <!--Início tabela de lista-->
+                            <h:dataTable value="#{usuarioBeans.buscaUsuarios}" var="usuario" styleClass="orders" headerClass="ordersHeader" columnClasses="oddColumn" rowClasses=" eveRow, oddRow">
+                                <h:column>
+                                    <f:facet name="header">
+                                        Id
+                                    </f:facet>
+                                    #{usuario.id}
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Nome
+                                    </f:facet>
+                                    #{usuario.nome}
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Login
+                                    </f:facet>
+                                    #{usuario.login}
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Senha
+                                    </f:facet>
+                                    #{usuario.senha}
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Data de nascimento
+                                    </f:facet>
+                                    #{usuario.datanascimento}
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Observações
+                                    </f:facet>
+                                    #{usuario.observacoes}
+                                </h:column>
+                            </h:dataTable> <!--Fim tabela de lista--> 
+
+                        </h:form>
+                    </div><!--fim contPrincipal-->
+                    <div id="lateral">
+                        <br />
+                        <br />
+                        <br />
+                        <f:view>
+                            <h:form>
+                                <h:outputLink value="index.xhtml" styleClass="link" >
+                                    <f:verbatim>Home</f:verbatim>
+                                </h:outputLink>
+                                <br /><br />
+                                <h:outputLink value="inserir.xhtml" styleClass="link" >
+                                    <f:verbatim>Inserir</f:verbatim>
+                                </h:outputLink>
+                                <br /><br />
+                                <h:outputLink value="buscar.jsf" styleClass="link">
+                                    <f:verbatim>Buscar</f:verbatim>
+                                </h:outputLink>
+                                <br /><br />
+                                <h:outputLink value="listar.xhtml" styleClass="link">
+                                    <f:verbatim>Listar</f:verbatim>
+                                </h:outputLink>
+                                <br /><br />
+                                <h:outputLink value="atualizar.xhtml" styleClass="link">
+                                    <f:verbatim>Atualizar</f:verbatim>
+                                </h:outputLink>
+                                <br /><br />
+                                <h:outputLink value="remover.xhtml" styleClass="link">
+                                    <f:verbatim>Remover</f:verbatim>
+                                </h:outputLink>
+
+                            </h:form>
+                        </f:view>
+                    </div><!--fim lateral-->
+                </div><!--fim conteudo-->
+                <div id="rodape">
+                    <p>IFSul - 2011/2</p>
+                    <p>TAP - Tópicos Avançados em Programação</p>
+                    <p>Ariane Rebellato</p>
+                    <p>&nbsp;</p>
+                </div><!--fim rodape-->
+            </div><!--fim content-->
+        </div><!--fim geral-->
+
+    </h:body>
+</html>
+

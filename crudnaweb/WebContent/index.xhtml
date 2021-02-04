@@ -12,30 +12,50 @@
 
 
 <h:form>
+
+
+	<h:dataTable value="#{controleCliente.pesquisa}" var="pesquisa"
+		border="1" style="margin-left:5%; border-radius: 3%">
+		<h:column>
+			<h:outputText value="Endereço:  " />
+			<h:inputText style="width:127px" styleClass="endereco"
+				value="#{controleCliente.pesquisa.pesquisado}" />
+			<br />
+		</h:column>
+
+		<h:column>
+			<h:commandButton style="margin-left:5%; border-radius:10% "
+				action="#{controleCliente.novaPesquisa}" value="Pesquisar" />
+
+		</h:column>
+	</h:dataTable>
+
+</h:form>
+
+
+
+
+
+<h:form>
 	<br />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<h:commandButton style="margin-left:5%; border-radius:10% "
 		action="#{controleCliente.novo}" value="Cadastrar novo cliente" />
 
 
 
-	<h:outputText value="Endereço:  " />
-	<h:inputText style="width:127px" styleClass="endereco"
-		value="#{controleCliente.pesquisa.pesquisado}" />
-	<br />
+
+
 	
-	
-
-	<h:commandButton style="margin-left:5%; border-radius:10% "
-		action="#{controleCliente.novaPesquisa}" value="Pesquisar" />
-
-
-
-
-
-
-
-
-
 
 	<br />
 
@@ -91,9 +111,15 @@
 			</h:commandLink>
 		</h:column>
 
+
 	</h:dataTable>
 
 
 
 </h:form>
+
+
+
+
+
 </html>

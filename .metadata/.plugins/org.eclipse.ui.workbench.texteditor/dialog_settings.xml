@@ -6,8 +6,13 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="pesquisa"/>
+		<item key="selection" value="pesqui"/>
 		<list key="findhistory">
+			<item value="pesqui"/>
+			<item value="endereco"/>
+			<item value="cliente"/>
+			<item value="pesquisaEnd"/>
+			<item value="pesquisaEndereco"/>
 			<item value="pesquisa"/>
 			<item value="listar"/>
 			<item value="list"/>
@@ -18,11 +23,6 @@
 			<item value="apache"/>
 			<item value="listener"/>
 			<item value="editar"/>
-			<item value="id"/>
-			<item value="novoEnde"/>
-			<item value="novo"/>
-			<item value="listarEnde"/>
-			<item value="consultar"/>
 		</list>
 		<list key="replacehistory">
 		</list>
