@@ -85,10 +85,8 @@ public class RepositorioCliente {
 		return clientes;
 		
 	}	
-	
-	
-	
-	
+
+
 	@SuppressWarnings("unchecked")
 	public List<Endereco> listarEnderecos(){	
 		em.getTransaction().begin();

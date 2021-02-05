@@ -1,5 +1,7 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
@@ -14,13 +16,12 @@
 <h:form>
 
 
-	<h:dataTable value="#{controleCliente.pesquisa}" var="pesquisa"
+	<h:dataTable value="#{controleCliente}" var="pesquisa"
 		border="1" style="margin-left:5%; border-radius: 3%">
 		<h:column>
 			<h:outputText value="Endereço:  " />
-			<h:inputText style="width:127px" styleClass="endereco"
-				value="#{controleCliente.pesquisa.pesquisado}" />
-			<br />
+			<h:inputText id="nome" maxlength="35" size="35"
+				binding="#{controleCliente.nomeText}" required="true" styleClass="FormCampo"></h:inputText>
 		</h:column>
 
 		<h:column>
@@ -38,16 +39,16 @@
 
 <h:form>
 	<br />
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
 	<h:commandButton style="margin-left:5%; border-radius:10% "
 		action="#{controleCliente.novo}" value="Cadastrar novo cliente" />
 
@@ -55,7 +56,7 @@
 
 
 
-	
+
 
 	<br />
 
