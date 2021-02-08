@@ -8,6 +8,8 @@ import javax.faces.bean.ManagedBean;
 
 import javax.faces.bean.SessionScoped;
 import javax.faces.component.html.HtmlInputText;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 
 import com.exemplo.entidade.Cliente;
 import com.exemplo.entidade.Endereco;
@@ -22,7 +24,7 @@ public class ControleCliente {
 	HtmlInputText nomeText = new HtmlInputText();
 	private Cliente cliente;
 	private List<Cliente> clientes;
-	private List<String> pesquisaEndereco;
+	private List<Endereco> pesquisaEndereco;
 	private Endereco endereco;
 	private List<Endereco> enderecos;
 
@@ -120,6 +122,13 @@ public class ControleCliente {
 		return "index";
 	}
 
+	public String submit() {
+	    ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+	    String userId = ec.getRequestParameterMap().get("formId:userId");
+	    String teste = "tst";
+	    return "buscaEnd";
+	}
+
 	public String novaPesquisa() {
 		pesquisa = new Pesquisa();
 		return "buscaEnd";
@@ -170,29 +179,32 @@ public class ControleCliente {
 	
 
 
-	public List<String> getPesquisaEndereco() {
+	public List<Endereco> getPesquisaEndereco() {
 		enderecos = repositorioCliente.listarEnderecos();
-		clientes = repositorioCliente.listarTodos();
+	
 		List<Endereco> listaEndereco = enderecos;
-		List<Cliente> listaCliente = clientes;
-		String nome = ((String) nomeText.getValue());
+		
+		List<Endereco> listaPesquisada = new ArrayList<Endereco>();
+	    ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+	    String textpesq = ec.getRequestParameterMap().get("formId:userId");
+		
 		
 
 		for (Endereco endereco : listaEndereco) {
 			 String lograd = endereco.getLogradouro();
-			 if (lograd.contains(nome)){
+			 if (lograd.contains(textpesq)){
 				 
-				 pesquisaEndereco.add(lograd);
+				 listaPesquisada.add(endereco);
 				
 			}
 			
 		}
-		return pesquisaEndereco;
+		return listaPesquisada;
 		
 	}
 
 
-	public void setPesquisaEndereco(List<String> pesquisaEndereco) {
+	public void setPesquisaEndereco(List<Endereco> pesquisaEndereco) {
 		this.pesquisaEndereco = pesquisaEndereco;
 	}
 

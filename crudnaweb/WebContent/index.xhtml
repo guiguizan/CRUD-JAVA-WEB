@@ -12,24 +12,15 @@
 
 <h:outputText value=" CRUD,  by Gui" />
 
+<h:form id="formId">
 
-<h:form>
 
+	<h:outputText value="Pesquiasr Endereço: " />
+	<h:inputText id="userId"/>
 
-	<h:dataTable value="#{controleCliente}" var="pesquisa"
-		border="1" style="margin-left:5%; border-radius: 3%">
-		<h:column>
-			<h:outputText value="Endereço:  " />
-			<h:inputText id="nome" maxlength="35" size="35"
-				binding="#{controleCliente.nomeText}" required="true" styleClass="FormCampo"></h:inputText>
-		</h:column>
+	<h:commandButton style="margin-left:5%; border-radius:10% "
+		action="#{controleCliente.submit}" value="Pesq" />
 
-		<h:column>
-			<h:commandButton style="margin-left:5%; border-radius:10% "
-				action="#{controleCliente.novaPesquisa}" value="Pesquisar" />
-
-		</h:column>
-	</h:dataTable>
 
 </h:form>
 

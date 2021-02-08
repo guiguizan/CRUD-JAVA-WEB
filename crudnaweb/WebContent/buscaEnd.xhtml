@@ -14,6 +14,7 @@
 <h:form>
 
 	<br />
+
 	<h:commandButton style="margin-left:5%; border-radius:10% "
 		action="#{controleCliente.novo}" value="Cadastrar novo cliente" />
 	<br />
@@ -25,29 +26,29 @@
 
 
 
-	<h:dataTable value="#{controleCliente.pesquisaEndereco}" var="cliente"
+	<h:dataTable value="#{controleCliente.pesquisaEndereco}" var="endereco"
 		border="1" style="margin-left:5%; border-radius: 3%">
 
 
 
 		<h:column>
-			<f:facet name="header"> Nome </f:facet>
-	
-	</h:column>
+			<f:facet name="header" style="color: purple"> Enderecos </f:facet>
+			#{endereco.logradouro}
+			</h:column>
 
 		<h:column>
 			<f:facet name="header"> Idade </f:facet>
-		
-	</h:column>
+
+		</h:column>
 
 		<h:column>
 			<f:facet name="header"> CPF </f:facet>
-		
-	</h:column>
+
+		</h:column>
 
 
 	</h:dataTable>
-		
-		
+
+
 </h:form>
 </html>
