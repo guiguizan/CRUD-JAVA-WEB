@@ -29,7 +29,7 @@
 <h:form id="formUsu">
 <br />
 <div style="margin-left: 5%">
-	<h:outputText value="Pesquisar Usuário " />
+	<h:outputText value="Pesquisar Endereço: " />
 	<h:inputText id="userPesq"/>
 
 	<h:commandButton style="margin-left:5%; border-radius:10% "

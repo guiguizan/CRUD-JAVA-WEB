@@ -19,7 +19,7 @@
 	<h:inputText id="userId"/>
 
 	<h:commandButton style="margin-left:5%; border-radius:10% "
-		action="#{controleCliente.submitEndereco}" value="Pesquisar" />
+		action="#{controleCliente.submit}" value="Pesquisar" />
 </div>
 </h:form>
 
@@ -29,11 +29,11 @@
 <h:form id="formUsu">
 <br />
 <div style="margin-left: 5%">
-	<h:outputText value="Pesquisar Usuário " />
+	<h:outputText value="Pesquisar Endereço: " />
 	<h:inputText id="userPesq"/>
 
 	<h:commandButton style="margin-left:5%; border-radius:10% "
-		action="#{controleCliente.submitUsuario}" value="Pesquisar" />
+		action="#{controleCliente.submit}" value="Pesquisar" />
 </div>
 
 </h:form>

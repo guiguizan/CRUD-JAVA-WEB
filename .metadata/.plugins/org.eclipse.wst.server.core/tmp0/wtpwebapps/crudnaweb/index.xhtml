@@ -13,16 +13,36 @@
 <h:outputText value=" CRUD,  by Gui" />
 
 <h:form id="formId">
-
-
-	<h:outputText value="Pesquiasr Endereço: " />
+<br />
+<div style="margin-left: 5%">
+	<h:outputText value="Pesquisar Endereço: " />
 	<h:inputText id="userId"/>
 
 	<h:commandButton style="margin-left:5%; border-radius:10% "
-		action="#{controleCliente.submit}" value="Pesq" />
+		action="#{controleCliente.submitEndereco}" value="Pesquisar" />
+</div>
+</h:form>
 
+
+
+
+<h:form id="formUsu">
+<br />
+<div style="margin-left: 5%">
+	<h:outputText value="Pesquisar Usuário " />
+	<h:inputText id="userPesq"/>
+
+	<h:commandButton style="margin-left:5%; border-radius:10% "
+		action="#{controleCliente.submitUsuario}" value="Pesquisar" />
+</div>
 
 </h:form>
+
+
+
+
+
+
 
 
 

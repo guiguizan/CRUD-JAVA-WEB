@@ -188,10 +188,10 @@ public class ControleCliente {
 	    String textpesq = ec.getRequestParameterMap().get("formUsu:userPesq");
 		
 		for (Cliente cliente : listaClientes) {
-			 String nomeUser = cliente.getNome();
-			 if (nomeUser.contains(textpesq)){
+			 String lograd = endereco.getLogradouro();
+			 if (lograd.contains(textpesq)){
 				 
-				 listaUserPesquisada.add(cliente);
+				 listaUserPesquisada.add(endereco);
 				
 			}
 			

@@ -122,14 +122,12 @@ public class ControleCliente {
 		return "index";
 	}
 
-	public String submitEndereco() {
+	public String submit() {
+	    ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+
 	    return "buscaEnd";
 	}
-	
-	public String submitUsuario() {
-	    return "buscaUser";
-	}
-	
+
 	public String novaPesquisa() {
 		pesquisa = new Pesquisa();
 		return "buscaEnd";
@@ -176,32 +174,6 @@ public class ControleCliente {
 		this.cliente = cliente;
 	}
 
-	
-	
-	public List<Cliente> getPesquisaCliente() {
-		clientes = repositorioCliente.listarTodos();
-	
-		List<Cliente> listaClientes = clientes;
-		
-		List<Cliente> listaUserPesquisada = new ArrayList<Cliente>();
-	    ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
-	    String textpesq = ec.getRequestParameterMap().get("formUsu:userPesq");
-		
-		for (Cliente cliente : listaClientes) {
-			 String nomeUser = cliente.getNome();
-			 if (nomeUser.contains(textpesq)){
-				 
-				 listaUserPesquisada.add(cliente);
-				
-			}
-			
-		}
-		return listaUserPesquisada;
-		
-	}
-	
-	
-	
 
 	
 

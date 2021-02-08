@@ -183,20 +183,20 @@ public class ControleCliente {
 	
 		List<Cliente> listaClientes = clientes;
 		
-		List<Cliente> listaUserPesquisada = new ArrayList<Cliente>();
+		List<Cliente> listaPesquisada = new ArrayList<Cliente>();
 	    ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
 	    String textpesq = ec.getRequestParameterMap().get("formUsu:userPesq");
 		
 		for (Cliente cliente : listaClientes) {
-			 String nomeUser = cliente.getNome();
-			 if (nomeUser.contains(textpesq)){
+			 String lograd = endereco.getLogradouro();
+			 if (lograd.contains(textpesq)){
 				 
-				 listaUserPesquisada.add(cliente);
+				 listaPesquisada.add(endereco);
 				
 			}
 			
 		}
-		return listaUserPesquisada;
+		return ;
 		
 	}
 	
