@@ -12,14 +12,14 @@
 <meta http-equiv="content=type" content="text/html"></meta>
 <title>projetao</title>
 
-<h:outputStylesheet name="estilo.css" library="css" />
 
 
 </head>
 
 
 <h:form>
-
+<p:growl id="messageGrowl" />
+<h:messages style="color:red"></h:messages>
 
 	<div style="margin-left:5%; margin-top:5%;" >
 		<h:outputText style="margin-left:5%" value="Dados do usuário" /> <br />
@@ -36,16 +36,17 @@
 		<h:outputText value="CPF: " />
 		<h:inputText style="margin-left:9px"
 			value="#{controleCliente.cliente.cpf}" />
+			
 		<br />
 
 
-		
+	
 		
 	<h:commandButton style="margin-left:6%" action="#{controleCliente.salvar}"
 		value="Enviar dados" />
 
 	</div>
-
+	
 
 </h:form>
 

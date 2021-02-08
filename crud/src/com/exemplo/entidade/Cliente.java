@@ -11,6 +11,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.validator.NotEmpty;
+import org.hibernate.validator.NotNull;
+import org.hibernate.validator.Size;
+
 @Entity
 @Table(name="Cliente")
 public class Cliente {
@@ -23,7 +27,10 @@ public class Cliente {
 	
 	@Column
 	private int idCliente;
+	
+	
 	@Column
+	@NotEmpty(message = "CPF obrigatório")
 	private String cpf;
 	@Column
 	private String nome;

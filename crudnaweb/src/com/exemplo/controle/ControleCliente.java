@@ -4,12 +4,18 @@ import java.util.ArrayList;
 
 import java.util.List;
 import java.util.Random;
+
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 
 import javax.faces.bean.SessionScoped;
 import javax.faces.component.html.HtmlInputText;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
+
+import org.hibernate.validator.HibernateValidatorFactory;
+import org.hibernate.validator.internal.metadata.facets.Validatable;
+import org.hibernate.validator.internal.xml.config.ValidationBootstrapParameters;
 
 import com.exemplo.entidade.Cliente;
 import com.exemplo.entidade.Endereco;
@@ -27,6 +33,7 @@ public class ControleCliente {
 	private List<Endereco> pesquisaEndereco;
 	private Endereco endereco;
 	private List<Endereco> enderecos;
+	public String mensagemDeErro = "";
 
 	private Pesquisa pesquisa;
 
@@ -97,10 +104,24 @@ public class ControleCliente {
 		Random random = new Random();
 		int idClientinho = random.nextInt(1000);
 		cliente.setIdCliente(idClientinho);
+		String cpfErrado = "CPF Inválido";
 
-		repositorioCliente.salvar(cliente);
+		
+		try {
+			repositorioCliente.salvar(cliente);		
+			return "index";
+		}catch(Exception e) {
+			System.out.print(e);
+			this.mensagemDeErro = "CPF Inválido";
+			   FacesContext.getCurrentInstance().addMessage("CPF INVALIDO", new FacesMessage(FacesMessage.SEVERITY_INFO,
+					   cpfErrado, e.getMessage()));
+			   return "formularioCliente";
+		}
+		
+		
+		
 
-		return "index";
+		
 	}
 
 	public String listarPorEndereco() {
