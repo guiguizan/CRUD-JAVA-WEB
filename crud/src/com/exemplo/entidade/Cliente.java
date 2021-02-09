@@ -30,7 +30,7 @@ public class Cliente {
 	
 	
 	@Column
-	@NotEmpty(message = "CPF obrigatório")
+	@NotEmpty
 	private String cpf;
 	@Column
 	private String nome;

@@ -34,7 +34,7 @@ public class ControleCliente {
 	private Endereco endereco;
 	private List<Endereco> enderecos;
 	public String mensagemDeErro = "";
-
+	private String tipoPesq;
 	private Pesquisa pesquisa;
 
 	public ControleCliente() {
@@ -59,6 +59,37 @@ public class ControleCliente {
 
 
 
+	
+	public String getTipoPesq() {
+		return tipoPesq;
+	}
+
+
+
+
+	public void setTipoPesq(String tipoPesq) {
+		this.tipoPesq = tipoPesq;
+	}
+
+
+
+
+	public String result() {
+
+	    if(getTipoPesq().equals("1")) {
+	    	
+	    	return "buscaEnd";
+	    }
+	    if(getTipoPesq().equals("2")) {
+	    
+	    	return "buscaUser";
+	    }else {
+	    	return "nao deu";
+	    }
+	    
+	}
+	
+	
 	public List<Endereco> getEnderecos() {
 		enderecos = repositorioCliente.listarEnderecos();
 		int idzinhoCliente = cliente.getIdCliente();
@@ -106,7 +137,6 @@ public class ControleCliente {
 		cliente.setIdCliente(idClientinho);
 		String cpfErrado = "CPF Inválido";
 
-		
 		try {
 			repositorioCliente.salvar(cliente);		
 			return "index";
@@ -118,10 +148,7 @@ public class ControleCliente {
 			   return "formularioCliente";
 		}
 		
-		
-		
 
-		
 	}
 
 	public String listarPorEndereco() {
@@ -206,7 +233,7 @@ public class ControleCliente {
 		
 		List<Cliente> listaUserPesquisada = new ArrayList<Cliente>();
 	    ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
-	    String textpesq = ec.getRequestParameterMap().get("formUsu:userPesq");
+	    String textpesq = ec.getRequestParameterMap().get("pesquisa:textPesquisa");
 		
 		for (Cliente cliente : listaClientes) {
 			 String nomeUser = cliente.getNome();
@@ -234,7 +261,7 @@ public class ControleCliente {
 		
 		List<Endereco> listaPesquisada = new ArrayList<Endereco>();
 	    ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
-	    String textpesq = ec.getRequestParameterMap().get("formId:userId");
+	    String textpesq = ec.getRequestParameterMap().get("pesquisa:textPesquisa");
 		
 		
 

@@ -28,8 +28,9 @@
     <fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
     <fullyQualifiedTypeName name="org.hibernate.validator.NotNull"/>
     <fullyQualifiedTypeName name="org.hibernate.validator.Size"/>
-    <fullyQualifiedTypeName name="org.hibernate.validator.NotEmpty"/>
     <fullyQualifiedTypeName name="org.hibernate.validator.HibernateValidatorFactory"/>
     <fullyQualifiedTypeName name="org.hibernate.validator.internal.xml.config.ValidationBootstrapParameters"/>
     <fullyQualifiedTypeName name="javax.faces.application.FacesMessage"/>
+    <fullyQualifiedTypeName name="com.exemplo.controle.ControleCliente"/>
+    <fullyQualifiedTypeName name="org.hibernate.validator.NotEmpty"/>
 </qualifiedTypeNameHistroy>

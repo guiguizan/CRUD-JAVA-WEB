@@ -12,31 +12,19 @@
 
 <h:outputText value=" CRUD,  by Gui" />
 
-<h:form id="formId">
-<br />
-<div style="margin-left: 5%">
-	<h:outputText value="Pesquisar Endereço: " />
-	<h:inputText id="userId"/>
-
-	<h:commandButton style="margin-left:5%; border-radius:10% "
-		action="#{controleCliente.submitEndereco}" value="Pesquisar" />
-</div>
-</h:form>
 
 
+ <h:form id="pesquisa" style="margin-top:5%; margin-left:4%"> 
+         
+         <h:selectOneMenu id="opt" value="#{controleCliente.tipoPesq}" >
+            <f:selectItem itemValue = "1" itemLabel = "Pesquisar por Endereço: " /> 
+            <f:selectItem itemValue = "2" itemLabel = "Pesquisar por Cliente" />    
+         </h:selectOneMenu>  
+         
+         <h:inputText style="margin-left:10px" id="textPesquisa" />
+         <h:commandButton value = "Pesquisar" action ="#{controleCliente.result}" /> 
+</h:form> 
 
-
-<h:form id="formUsu">
-<br />
-<div style="margin-left: 5%">
-	<h:outputText value="Pesquisar Usuário: " />
-	<h:inputText style="margin-left:10px" id="userPesq"/>
-
-	<h:commandButton style="margin-left:5%; border-radius:10% "
-		action="#{controleCliente.submitUsuario}" value="Pesquisar" />
-</div>
-
-</h:form>
 
 
 
@@ -127,11 +115,6 @@
 	</h:dataTable>
 
 
-
 </h:form>
-
-
-
-
 
 </html>
