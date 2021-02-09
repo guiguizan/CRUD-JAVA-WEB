@@ -6,32 +6,32 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="pesqui"/>
+		<item key="selection" value="Messa"/>
 		<list key="findhistory">
+			<item value="messa"/>
+			<item value="facesMess"/>
+			<item value="head"/>
+			<item value="pesqu"/>
+			<item value="pesquisar"/>
+			<item value="pesquisaEndereco"/>
+			<item value="submit"/>
+			<item value="pesquisa"/>
+			<item value="nome"/>
+			<item value="clientes"/>
+			<item value="cliente"/>
+			<item value="enderecos"/>
 			<item value="pesqui"/>
 			<item value="endereco"/>
-			<item value="cliente"/>
 			<item value="pesquisaEnd"/>
-			<item value="pesquisaEndereco"/>
-			<item value="pesquisa"/>
-			<item value="listar"/>
-			<item value="list"/>
-			<item value="clientes"/>
-			<item value="nova"/>
-			<item value="salvar"/>
-			<item value="tomcat"/>
-			<item value="apache"/>
-			<item value="listener"/>
-			<item value="editar"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="186"/>
-		<item key="DIALOG_Y_ORIGIN" value="385"/>
+		<item key="DIALOG_Y_ORIGIN" value="352"/>
 		<item key="DIALOG_WIDTH" value="284"/>
-		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_HEIGHT" value="384"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>

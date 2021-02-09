@@ -24,4 +24,12 @@
     <fullyQualifiedTypeName name="org.apache.tomcat.dbcp.dbcp2.ConnectionFactory"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.exemplo.repositorio.Pesquisa"/>
+    <fullyQualifiedTypeName name="javax.faces.context.ExternalContext"/>
+    <fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
+    <fullyQualifiedTypeName name="org.hibernate.validator.NotNull"/>
+    <fullyQualifiedTypeName name="org.hibernate.validator.Size"/>
+    <fullyQualifiedTypeName name="org.hibernate.validator.NotEmpty"/>
+    <fullyQualifiedTypeName name="org.hibernate.validator.HibernateValidatorFactory"/>
+    <fullyQualifiedTypeName name="org.hibernate.validator.internal.xml.config.ValidationBootstrapParameters"/>
+    <fullyQualifiedTypeName name="javax.faces.application.FacesMessage"/>
 </qualifiedTypeNameHistroy>
